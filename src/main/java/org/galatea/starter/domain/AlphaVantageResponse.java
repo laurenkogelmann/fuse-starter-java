@@ -2,13 +2,11 @@ package org.galatea.starter.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;
-import javax.persistence.Entity;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 
 @Data
-@Entity
-@Getter
+@Builder
 
 public class AlphaVantageResponse {
 
