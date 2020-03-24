@@ -5,6 +5,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.validation.constraints.Positive;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.aspect4log.Log;
 import net.sf.aspect4log.Log.Level;
@@ -19,12 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Log(enterLevel = Level.INFO, exitLevel = Level.INFO)
 @Validated
+@RequiredArgsConstructor
 @RestController
-
 public class StockPriceRestController {
 
   @NonNull
-  private StockPriceService StockPriceService;
+  private StockPriceService stockPriceService;
 
   /**
    * Get the prices for the last N days for the symbol passed in.
@@ -45,6 +46,7 @@ public class StockPriceRestController {
       final Integer days)
   {
     log.info("Received a valid request from the client.");
-    return StockPriceService.getPricesForSymbolForLastNDays(symbol, days);
+    return stockPriceService.getPricesForSymbolForLastNDays(symbol, days);
   }
+
 }
