@@ -116,19 +116,18 @@
 			"response": []
 		},
 		{
-			"name": "IEX - Get all symbols",
+			"name": "Alpha Vantage - Test Rest Controller",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{host}}/iex/symbols",
+					"raw": "https://localhost:8080/prices?symbol=AAPL&days=20",
 					"protocol": "http",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"iex",
-						"symbols"
+						"prices"
 					]
 				}
 			},

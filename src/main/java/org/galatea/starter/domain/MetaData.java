@@ -1,11 +1,11 @@
 package org.galatea.starter.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.persistence.Entity;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Entity
+@Builder
 
 public class MetaData {
 
