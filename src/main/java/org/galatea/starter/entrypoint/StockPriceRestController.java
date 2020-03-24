@@ -33,7 +33,7 @@ public class StockPriceRestController {
    * @param days number of days to get these prices for.
    * @return a List of StockPrice objects for the given symbol for the given number of days.
    */
-  @GetMapping(value = "${mvc.av.getAllPricesPath}", produces = {MediaType.APPLICATION_JSON_VALUE})
+  @GetMapping(value = "${av.getAllPricesPath}", produces = {MediaType.APPLICATION_JSON_VALUE})
   public AlphaVantageResponse getTickerPrices(
       @RequestParam (value = "symbol", required = true)
       @Size(min=1, max=5, message = "Stock symbol must be between 1 and 5 characters.") //Check that Symbol is valid # of chars
