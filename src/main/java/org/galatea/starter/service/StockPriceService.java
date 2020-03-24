@@ -1,14 +1,10 @@
 package org.galatea.starter.service;
 
-import java.util.Collections;
-import java.util.List;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.galatea.starter.domain.AlphaVantageResponse;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 /**
  * A layer for transformation, aggregation, and business required when retrieving data from Alpha Vantage.
@@ -16,25 +12,25 @@ import org.springframework.util.CollectionUtils;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-
 public class StockPriceService {
 
   @NonNull
-  private StockPriceClient StockPriceClient;
-  private Integer days;
+  private StockPriceClient stockPriceClient;
 
   /**
    * Get the prices for the Symbol that is passed in.
    *
-   * @param //days the number of days to get prices for that ticker.
-   * @param //symbol the symbol to get open, high, low and close prices for.
+   * @param days the number of days to get prices for that ticker.
+   * @param symbol the symbol to get open, high, low and close prices for.
    * @return a list of prices objects for that symbol for only the specified.
    */
+
   public AlphaVantageResponse getPricesForSymbolForLastNDays(final String symbol, final Integer days) {
-    return StockPriceClient.getPricesForSymbolForLastNDays(symbol, days);
+    return stockPriceClient.getPricesForSymbolForLastNDays(symbol, days);
   }
 
 }
+
 
   //get dates to determine whether the call to AV should be compact or full
   /*public List<> getDatesNeededForStockData(final List<String> days){
