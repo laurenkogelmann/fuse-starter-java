@@ -45,7 +45,7 @@ spring:
       username: sa
       password:
    rest:
-      alphaVantageBasePath: https://www.alphavantage.co/query?
+      alphaVantageBasePath: https://www.alphavantage.co/query
 # set debug to get spring to log the classpath (and other things) on startup
 debug: true
 
