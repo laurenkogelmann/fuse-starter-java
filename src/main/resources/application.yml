@@ -22,6 +22,7 @@ av:
 
 alpha-vantage:
    uri: https://www.alphavantage.co/query
+   apikey: JOPS4F26A70GUME2
 
 # Set debug level logging for the Stock Price Client so that Feign requests and responses are logged out
 log.level.org.galatea.starter.service.StockPriceClient: DEBUG
