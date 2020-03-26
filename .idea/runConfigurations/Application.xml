@@ -5,7 +5,7 @@
     <option name="MAIN_CLASS_NAME" value="org.galatea.starter.Application" />
     <module name="fuse-starter-java" />
     <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=dev --server.port=8081" />
-    <option name="VM_PARAMETERS" value="-Dapplication.name=my-fuse-app -Dapplication.log-dir=logs -Dapplication.log-archive-root-dir=logs/archive" />
+    <option name="VM_PARAMETERS" value="-Dapplication.name=my-fuse-app -Dapplication.log-dir=logs -Dapplication.log-archive-root-dir=logs/archive -Dlog4j.configurationFile=log4j2-stdout.yml" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.galatea.starter.*" />
