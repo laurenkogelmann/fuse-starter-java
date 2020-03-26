@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * daily stock time series. See https://www.alphavantage.co/documentation/
  */
 
-@FeignClient(name = "AlphaVantage", url = "${spring.rest.alphaVantageBasePath}")
+@FeignClient(name = "AlphaVantage", url = "${spring.alpha-vantage.uri}")
 
 public interface StockPriceClient {
 

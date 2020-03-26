@@ -20,6 +20,9 @@ mvc:
 av:
    getAllPricesPath: /prices
 
+alpha-vantage:
+   uri: https://www.alphavantage.co/query
+
 # Set debug level logging for the Stock Price Client so that Feign requests and responses are logged out
 log.level.org.galatea.starter.service.StockPriceClient: DEBUG
 # Set info level logging for the autoconfigure package so that it doesn't print out the entire
