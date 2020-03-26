@@ -9,6 +9,7 @@ import net.sf.aspect4log.Log;
 import net.sf.aspect4log.Log.Level;
 import org.galatea.starter.domain.AlphaVantageResponse;
 import org.galatea.starter.service.StockPriceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class StockPriceRestController {
 
   @NonNull
+  @Autowired
   private StockPriceService stockPriceService;
 
   /**
@@ -38,12 +40,12 @@ public class StockPriceRestController {
       @Pattern(regexp = "[a-zA-Z0-9]+", message = "Stock symbol must be alphanumeric.") //Check that Symbol is alphanumeric
       final String symbol,
       @RequestParam(value = "days", required = true)
-      @Pattern(regexp = "[0-9]+", message = "Number of days must be a numeric value.") //Check that days is a number
+      //@Pattern(regexp = "[0-9]+", message = "Number of days must be a numeric value.") //Check that days is a number
       @Positive(message = "Number of Days must be a positive number. Zero is invalid.") //Check that days is positive
       final Integer days)
   {
     log.info("Received a valid request from the client.");
-    return stockPriceService.getPricesForSymbolForLastNDays(symbol, days);
+    return stockPriceService.getPricesForSymbolForLastNDays(symbol);
   }
 
 }

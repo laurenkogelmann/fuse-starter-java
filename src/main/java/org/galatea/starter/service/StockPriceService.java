@@ -4,6 +4,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.galatea.starter.domain.AlphaVantageResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,18 +16,19 @@ import org.springframework.stereotype.Service;
 public class StockPriceService {
 
   @NonNull
+  @Autowired
   private StockPriceClient stockPriceClient;
 
   /**
    * Get the prices for the Symbol that is passed in.
    *
-   * @param days the number of days to get prices for that ticker.
+   * //@param days the number of days to get prices for that ticker.
    * @param symbol the symbol to get open, high, low and close prices for.
    * @return a list of prices objects for that symbol for only the specified.
    */
 
-  public AlphaVantageResponse getPricesForSymbolForLastNDays(final String symbol, final Integer days) {
-    return stockPriceClient.getPricesForSymbolForLastNDays(symbol, days);
+  public AlphaVantageResponse getPricesForSymbolForLastNDays(final String symbol) {
+    return stockPriceClient.getPricesForSymbolForLastNDays(symbol);
   }
 
 }
