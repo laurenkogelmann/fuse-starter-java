@@ -23,6 +23,6 @@ public interface StockPriceClient {
    * @return a list of the prices for each of the last N days for the symbol passed in.
    */
 
-  @GetMapping("function=TIME_SERIES_DAILY&apikey=${alpha-vantage.apikey}")
+  @GetMapping("/query?function=TIME_SERIES_DAILY&apikey=${alpha-vantage.apikey}")
   AlphaVantageResponse getPricesForSymbolForLastNDays(@RequestParam("symbol") String symbol);
 }

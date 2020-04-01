@@ -46,16 +46,6 @@ public class RestExceptionHandler {
     return buildResponseEntity(error);
   }
 
-  @ExceptionHandler(ConstraintViolationException.class)
-  protected ResponseEntity<Object> handleConstraintViolation(
-      final ConstraintViolationException exception) {
-    log.debug("Invalid input data sent", exception);
-    String errorMessage = ConstraintViolationMessageFormatter.toMessage(exception);
-
-    ApiError error = new ApiError(HttpStatus.BAD_REQUEST, errorMessage);
-    return buildResponseEntity(error);
-  }
-
   @ExceptionHandler(JsonProcessingException.class)
   protected ResponseEntity<Object> handleJsonProcessingException(
       final JsonProcessingException exception) {

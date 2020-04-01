@@ -21,7 +21,7 @@ av:
    getAllPricesPath: /prices
 
 alpha-vantage:
-   uri: https://www.alphavantage.co/query
+   uri: https://www.alphavantage.co
    apikey: JOPS4F26A70GUME2
 
 # Set debug level logging for the Stock Price Client so that Feign requests and responses are logged out
