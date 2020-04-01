@@ -20,6 +20,10 @@ mvc:
 av:
    getAllPricesPath: /prices
 
+alpha-vantage:
+   uri: https://www.alphavantage.co
+   apikey: JOPS4F26A70GUME2
+
 # Set debug level logging for the Stock Price Client so that Feign requests and responses are logged out
 log.level.org.galatea.starter.service.StockPriceClient: DEBUG
 # Set info level logging for the autoconfigure package so that it doesn't print out the entire
@@ -45,7 +49,7 @@ spring:
       username: sa
       password:
    rest:
-      alphaVantageBasePath: https://www.alphavantage.co/query?
+      alphaVantageBasePath: https://www.alphavantage.co/query
 # set debug to get spring to log the classpath (and other things) on startup
 debug: true
 
