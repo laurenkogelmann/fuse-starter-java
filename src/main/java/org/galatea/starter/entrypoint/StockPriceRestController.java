@@ -38,7 +38,6 @@ public class StockPriceRestController {
       @Pattern(regexp = "[a-zA-Z0-9]+", message = "Stock symbol must be alphanumeric.") //Check that Symbol is alphanumeric
       final String symbol,
       @RequestParam(value = "days", required = true)
-      @Pattern(regexp = "[0-9]+", message = "Number of days must be a numeric value.") //Check that days is a number
       @Positive(message = "Number of Days must be a positive number. Zero is invalid.") //Check that days is positive
       final Integer days)
   {
