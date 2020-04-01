@@ -4,6 +4,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.galatea.starter.domain.AlphaVantageResponse;
+import org.galatea.starter.domain.rpsy.StockPriceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,9 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class StockPriceService {
+
+  @NonNull
+  StockPriceRepository stockPriceRepository;
 
   @NonNull
   @Autowired
