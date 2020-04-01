@@ -26,7 +26,7 @@ public class StockPriceService {
    * @param symbol the symbol to get open, high, low and close prices for.
    * @return a list of prices objects for that symbol for only the specified.
    */
-  
+
   public AlphaVantageResponse getPricesForSymbolForLastNDays(final String symbol) {
     return stockPriceClient.getPricesForSymbolForLastNDays(symbol);
   }
