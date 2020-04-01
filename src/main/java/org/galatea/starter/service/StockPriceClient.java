@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * daily stock time series. See https://www.alphavantage.co/documentation/
  */
 
-@FeignClient(name = "AlphaVantage", url = "${spring.rest.alphaVantageBasePath}")
+@FeignClient(name = "AlphaVantage", url = "${alpha-vantage.uri}")
 
 public interface StockPriceClient {
 
@@ -23,7 +23,6 @@ public interface StockPriceClient {
    * @return a list of the prices for each of the last N days for the symbol passed in.
    */
 
-  @GetMapping("function=TIME_SERIES_DAILY")
-  AlphaVantageResponse getPricesForSymbolForLastNDays(@RequestParam("symbol") String symbol, @RequestParam("days") Integer days);
-
+  @GetMapping("/query?function=TIME_SERIES_DAILY&apikey=${alpha-vantage.apikey}")
+  AlphaVantageResponse getPricesForSymbolForLastNDays(@RequestParam("symbol") String symbol);
 }
