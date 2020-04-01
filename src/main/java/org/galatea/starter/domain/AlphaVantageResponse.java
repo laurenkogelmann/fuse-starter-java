@@ -2,13 +2,11 @@ package org.galatea.starter.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;
-import javax.persistence.Entity;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 
 @Data
-@Entity
-@Getter
+@Builder
 
 public class AlphaVantageResponse {
 
@@ -17,16 +15,6 @@ public class AlphaVantageResponse {
   private MetaData metaData;
 
   @JsonProperty("Time Series (Daily)")
-  private TimeSeriesData timeSeriesData;
-
-/*
-  private Map<String,Object> timeSeriesDataTag;
-
-  public AlphaVantageResponse (
-      @JsonProperty("Meta Data") MetaData metaData,
-      @JsonProperty("Time Series (Daily)") Map<String,Object> timeSeriesDataTag) {
-    this.metaData = metaData;
-    this.timeSeriesDataTag = timeSeriesDataTag;
-  }*/
+  private Map<String,Object> timeSeriesData;
 
 }
