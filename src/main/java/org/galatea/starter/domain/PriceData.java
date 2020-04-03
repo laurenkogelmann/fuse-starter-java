@@ -8,7 +8,6 @@ import lombok.Data;
 
 @Data
 @Builder
-
 public class PriceData {
 
   @JsonProperty("1. open")

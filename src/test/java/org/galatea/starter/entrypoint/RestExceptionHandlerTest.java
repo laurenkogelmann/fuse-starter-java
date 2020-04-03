@@ -47,15 +47,6 @@ public class RestExceptionHandlerTest {
   }
 
   @Test
-  public void handleConstraintViolation() {
-    // we mock the ConstraintViolation to minimize the code needed to setup the test
-    ConstraintViolation<String> violation = mock(ConstraintViolation.class);
-    ConstraintViolationException exception = new ConstraintViolationException(singleton(violation));
-    ResponseEntity<Object> response = handler.handleConstraintViolation(exception);
-    assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-  }
-
-  @Test
   public void handleJsonProcessingException() {
     JsonProcessingException exception = new JsonProcessingException("msg") {};
     ResponseEntity<Object> response = handler.handleJsonProcessingException(exception);

@@ -6,10 +6,8 @@ import lombok.Data;
 
 @Data
 @Builder
-
 public class MetaData {
 
-  //Variables to define each element of the meta data
   @JsonProperty("1. Information")
   private String information;
 
