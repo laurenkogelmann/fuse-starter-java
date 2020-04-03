@@ -27,7 +27,6 @@ public class StockPriceService {
   StockPriceRepository stockPriceRepository;
 
   @NonNull
-  @Autowired
   private StockPriceClient stockPriceClient;
 
   /**
