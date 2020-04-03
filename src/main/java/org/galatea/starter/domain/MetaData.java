@@ -1,16 +1,13 @@
 package org.galatea.starter.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.persistence.Entity;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-@Entity
 public class MetaData {
 
-  //Variables to define each element of the meta data
   @JsonProperty("1. Information")
   private String information;
 
