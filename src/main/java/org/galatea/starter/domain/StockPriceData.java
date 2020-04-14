@@ -16,7 +16,7 @@ import lombok.NonNull;
 @Data
 @Builder
 @Entity
-public class StockPriceTable {
+public class StockPriceData {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
