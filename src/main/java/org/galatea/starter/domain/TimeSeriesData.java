@@ -10,10 +10,8 @@ import lombok.Data;
 
 @Data
 @Builder
-@Entity
 public class TimeSeriesData {
 
-  //Within time series we have date objects
   @JsonFormat(
       shape = Shape.STRING,
       pattern = "yyyy-MM-dd")

@@ -9,7 +9,6 @@ import lombok.Data;
 
 @Data
 @Builder
-@Entity
 public class PriceData {
 
   @JsonProperty("1. open")

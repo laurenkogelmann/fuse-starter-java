@@ -6,13 +6,13 @@ import java.util.Date;
 import org.galatea.starter.domain.StockPriceTable;
 import org.springframework.data.repository.CrudRepository;
 
-public interface StockPriceRepository extends CrudRepository<StockPriceTable, Long> {
+public interface StockPriceRepository extends CrudRepository<StockPriceData, Long> {
 
   /*
   * Find by symbol first to determine if the symbol exists in the database
   * @param symbol
    */
-  List<StockPriceTable> findBySymbol(String symbol);
+  List<StockPriceData> findBySymbol(String symbol);
 
   /*
    * Find records by symbol and ticker in the database
@@ -20,6 +20,6 @@ public interface StockPriceRepository extends CrudRepository<StockPriceTable, Lo
    * @param symbol
    * @param date
    */
-  List<StockPriceTable> findBySymbolAndDateIn(String Symbol, List<Date> date);
+  List<StockPriceData> findBySymbolAndDateIn(String Symbol, List<Date> date);
 
 }
