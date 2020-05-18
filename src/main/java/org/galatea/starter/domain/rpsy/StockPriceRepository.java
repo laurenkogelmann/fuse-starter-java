@@ -1,8 +1,9 @@
 package org.galatea.starter.domain.rpsy;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Date;
-import org.galatea.starter.domain.StockPriceData;
+import org.galatea.starter.domain.StockPriceTable;
 import org.springframework.data.repository.CrudRepository;
 
 public interface StockPriceRepository extends CrudRepository<StockPriceData, Long> {

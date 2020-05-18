@@ -2,6 +2,7 @@ package org.galatea.starter.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;
+import javax.persistence.Entity;
 import lombok.Builder;
 import lombok.Data;
 

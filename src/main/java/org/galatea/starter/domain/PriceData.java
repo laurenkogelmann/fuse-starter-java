@@ -3,6 +3,7 @@ package org.galatea.starter.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.persistence.Entity;
 import lombok.Builder;
 import lombok.Data;
 
